@@ -11,9 +11,9 @@
 #define RM_PORT 100 
 #define RB_PORT 7
 #define IMU_PORT 5
-#define Intake_port 11
-#define LadyBrown_PORT 19
-#define OPTICAL_PORT 20
+#define Intake_port 1
+#define cascade_port 4
+#define banshee_PORT 2
 #define DISTANCE_PORT 19
 #define ROTATION_PORT 4
 
@@ -26,10 +26,10 @@ pros::Motor RM (RM_PORT, pros::E_MOTOR_GEARSET_06, false); //keep
 pros::Motor RB (RB_PORT, pros::E_MOTOR_GEARSET_06, false); //keep                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 
 pros::Motor Intake (Intake_port, pros::E_MOTOR_GEARSET_06, true);
-pros::Motor LadyBrown (LadyBrown_PORT, pros::E_MOTOR_GEARSET_18, true);
+pros::Motor cascade (cascade_port, pros::E_MOTOR_GEARSET_18, true);
 
 pros::Imu imu(IMU_PORT);
-pros::Optical eyes(OPTICAL_PORT);
+pros::Optical eyes(banshee_PORT);
 pros::Rotation roto(ROTATION_PORT);
 pros::Distance dis (DISTANCE_PORT);
 pros::Controller con (pros::E_CONTROLLER_MASTER);

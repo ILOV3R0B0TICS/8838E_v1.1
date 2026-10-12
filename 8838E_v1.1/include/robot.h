@@ -14,10 +14,10 @@ extern pros::Motor RM;
 extern pros::Motor RB;
 
 extern pros::Motor Intake;
-extern pros::Motor LadyBrown;
+extern pros::Motor cascade;
 
 extern pros::Imu imu;
-extern pros::Optical eyes; 
+extern pros::Motor banshee; 
 extern pros::Rotation roto;
 extern pros::Distance dis;
 extern pros::Controller con;

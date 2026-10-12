@@ -4,14 +4,14 @@
 
 //header Guards, safety
 
-#define LF_PORT 1 
-#define LM_PORT 2 
-#define LB_PORT 3 
-#define RF_PORT 10
-#define RM_PORT 9 
-#define RB_PORT 8 
+#define LF_PORT 10
+#define LM_PORT 100
+#define LB_PORT 9
+#define RF_PORT 8
+#define RM_PORT 100 
+#define RB_PORT 7
 #define IMU_PORT 5
-#define Intake_port 7
+#define Intake_port 11
 #define LadyBrown_PORT 19
 #define OPTICAL_PORT 20
 #define DISTANCE_PORT 19

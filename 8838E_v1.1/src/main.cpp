@@ -180,159 +180,7 @@ eyes.set_led_pwm(100);
 while (true) {
 
 
-	// if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_B)) {
-	// 	color = 2;
-	// 	while (true){
-	// 	ColorSort();
-	// 		delay(10);
-	// 	}
 
-	// }c
-
-//Stakewing toggle
-//  if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_B)) {
-// 	Intake.move(127);
-// 	// color = 1;
-// 	// while(true){
-// 	// 	ColorSort();
-// 	// 	delay(10);
-// 	// }
-// 	// driveStraight2(100);
-// 	// driveArcRF(90, 600, 1500, 100);
-// 	// driveStraight2(100);
-//  }
-
-  
-
-  if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_Y)) {
-	StakeWingToggle = !StakeWingToggle;
-	 }
-StakeWing.set_value(StakeWingToggle);
-
-//Intake
-if (con.get_digital(E_CONTROLLER_DIGITAL_R1)){
-	Intake.move(127);
-	Intake.tare_position();
-	hooks_Macro = false; 
-}
-else if (con.get_digital(E_CONTROLLER_DIGITAL_R2)){
-	Intake.move (-127);
-	Intake.tare_position(); 
-	hooks_Macro = false; 
-} else {
-	Intake.move(0);
-	Intake.tare_position(); 
-	hooks_Macro = false; 
-}
-
-
-//lady brown macro 
-if(con.get_digital(E_CONTROLLER_DIGITAL_L1)){
-	LBC = false;
-	LadyBrown.move(127);
-	
-	
-} else if(con.get_digital(E_CONTROLLER_DIGITAL_L2)){
-	LBC = false;
-	LadyBrown.move(-127);
-
-	
-	
- } else if (LBC == false){
- 	LadyBrown.move(0);
-	 LadyBrown.brake();
- }
-
-
-
-if (con.get_digital(E_CONTROLLER_DIGITAL_UP)) { //lady brown loading macro
-  // Set it into Macro Mode
-  LBC = true;
-  Macro++;
-
-  // Finds the angle that we need to move 
-  double current_angle = roto.get_angle() / 100.0;
-  double target_angle = 247;
-  double change_angle = target_angle - current_angle;
-  
-  // Finding how far to move the motor
-  double motor_ticks = change_angle * 5;
-
-  // Move motor to the desired position
-  LadyBrown.move_relative(motor_ticks, 90);
-} 
-
-if (con.get_digital(E_CONTROLLER_DIGITAL_DOWN)) { //lady brown descore macro
-	// Set it into Macro Mode
-	LBC = true;
-	Macro++;
-  
-	// Finds the angle that we need to move 
-	double current_angle = roto.get_angle() / 100.0;
-	double target_angle = 130;
-	double change_angle = target_angle - current_angle;
-	
-	// Finding how far to move the motor
-	double motor_ticks = change_angle * 5;
-  
-	// Move motor to the desired position
-	LadyBrown.move_relative(motor_ticks, 90);
-  } 
-  
-  if (con.get_digital(E_CONTROLLER_DIGITAL_LEFT)) { //lady brown double loading macro
-	// Set it into Macro Mode
-	LBC = true;
-	Macro++;
-  
-	// Finds the angle that we need to move 
-	double current_angle = roto.get_angle() / 100.0;
-	double target_angle = 220;
-	double change_angle = target_angle - current_angle;
-	
-	// Finding how far to move the motor
-	double motor_ticks = change_angle * 5;
-  
-	// Move motor to the desired position
-	LadyBrown.move_relative(motor_ticks, 90);
-  } 
-
-  if (con.get_digital(E_CONTROLLER_DIGITAL_RIGHT)) { //lady brown double loading macro
-	// Set it into Macro Mode
-	LBC = true;
-	Macro++;
-  
-	// Finds the angle that we need to move 
-	double current_angle = roto.get_angle() / 100.0;
-	double target_angle = 105;
-	double change_angle = target_angle - current_angle;
-	
-	// Finding how far to move the motor
-	double motor_ticks = change_angle * 5;
-  
-	// Move motor to the desired position
-	LadyBrown.move_relative(motor_ticks, 90);
-  } 
-// if(LBC){
-// 	//LadyBrown.move(127);
-// 	setConstants(MACRO_KP, MACRO_KI, MACRO_KD);
-// 	Macro = 0;
-// 	if (Macro == 0){
-// 		LadyBrown.move(calcPID(35000, roto.get_angle(), 0, 0));//need to get the right angle optimal angle `
-// 	} else if (Macro == 1){
-// 		LadyBrown.move(calcPID(31000, roto.get_angle(), 0, 0));
-// 	}else {
-// 		//LadyBrown.move(0);
-		
-// 	}
-// }
-// make conversion variable
-
-
-//pistons for mogo
-
-if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_X)){
-MogoMechToggle = !MogoMechToggle;
-}  MogoMech.set_value(MogoMechToggle);
 
 //chassis drive 
 int power = con.get_analog(ANALOG_LEFT_Y);
@@ -341,10 +189,9 @@ int turn = int(pow(RX, 3)/ 16129);
 int left= power + turn; 
 int right = power - turn;
 
-// if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_B)){
-// 	arcToggle = !arcToggle;
-// 	tankToggle = !tankToggle;
-// }
+if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_B)){
+DriveStraightAuto();
+}
 
 if (tankToggle){
 	LF.move(con.get_analog(ANALOG_LEFT_Y));
@@ -365,9 +212,9 @@ RB.move(right);
 }
 double  chasstemp = ((RF.get_temperature() + RB.get_temperature() + LF.get_temperature() + LB.get_temperature())/4);
 if (time % 50 == 0 && time % 100 !=0 && time % 150 !=0){
-    con.print(0,0,"Time:%f       ", float(time2));//viewTime
+    con.print(0,0,"error:%f       ", float(error));//viewTime
 } else if (time% 100 == 0 && time % 150 !=0){
-    con.print(1,0,"start?%f      ", bool(InitColor));
+    con.print(1,0,"imu:%f      ", float(imu.get_heading()));//viewTime
 } else if (time % 150 == 0){
     con.print(2,0,"C:%i H:%i LB:%i      ",int(chasstemp), int(Intake.get_temperature()), int(LadyBrown.get_temperature()));
 }
@@ -376,5 +223,6 @@ delay(10);
 time += 10;
 
 }
+
 
 }

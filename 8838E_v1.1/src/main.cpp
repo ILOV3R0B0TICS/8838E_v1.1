@@ -219,10 +219,10 @@ Intake.move(0);
 banshee2.move(0);
 }
 
-if(con.get_digital(E_CONTROLLER_DIGITAL_UP)){
+if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
 banshee.move(127);
 banshee.move(127);
-} else if(con.get_digital(E_CONTROLLER_DIGITAL_DOWN)){
+} else if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
 banshee.move(-127);
 banshee.move(-127);
 }

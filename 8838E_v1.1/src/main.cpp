@@ -192,10 +192,10 @@ int turn = int(pow(RX, 3)/ 16129);
 int left= power + turn; 
 int right = power - turn;
 
-if(con.get_digital(E_CONTROLLER_DIGITAL_R1)){
+if(con.get_digital(E_CONTROLLER_DIGITAL_R2)){
 cascade.move(127);
 cascade2.move(127);
-} else if(con.get_digital(E_CONTROLLER_DIGITAL_R2)){
+} else if(con.get_digital(E_CONTROLLER_DIGITAL_R1)){
 cascade.move(-127);
 cascade2.move(-127);
 }
@@ -206,29 +206,24 @@ cascade2.move(0);
 
 if(con.get_digital(E_CONTROLLER_DIGITAL_L1)){
 Intake.move(127);
-Intake.move(127);
 banshee2.move(-127);
 } else if(con.get_digital(E_CONTROLLER_DIGITAL_L2)){
-Intake.move(-127);
 Intake.move(-127);
 banshee2.move(127);
 }
 else{
 Intake.move(0);
-Intake.move(0);
-banshee2.move(0);
+banshee2.move(20);
 }
 
 if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
 banshee.move(127);
-banshee.move(127);
 } else if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
-banshee.move(-127);
 banshee.move(-127);
 }
 else{
 banshee.move(0);
-banshee.move(0);
+}
 
 if (tankToggle){
 	LF.move(con.get_analog(ANALOG_LEFT_Y));
@@ -262,5 +257,4 @@ time += 10;
 }
 }
 
-}
 

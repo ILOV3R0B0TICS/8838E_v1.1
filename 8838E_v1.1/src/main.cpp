@@ -177,8 +177,11 @@ bool IntakePiston = false;
 eyes.set_led_pwm(100);
 
 
-while (true) {
 
+while (true) {
+cascade.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
+cascade2.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
+banshee.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
 
 
 
@@ -189,9 +192,43 @@ int turn = int(pow(RX, 3)/ 16129);
 int left= power + turn; 
 int right = power - turn;
 
-if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_B)){
-DriveStraightAuto();
+if(con.get_digital(E_CONTROLLER_DIGITAL_R1)){
+cascade.move(127);
+cascade2.move(127);
+} else if(con.get_digital(E_CONTROLLER_DIGITAL_R2)){
+cascade.move(-127);
+cascade2.move(-127);
 }
+else{
+cascade.move(0);
+cascade2.move(0);
+}
+
+if(con.get_digital(E_CONTROLLER_DIGITAL_L1)){
+Intake.move(127);
+Intake.move(127);
+banshee2.move(-127);
+} else if(con.get_digital(E_CONTROLLER_DIGITAL_L2)){
+Intake.move(-127);
+Intake.move(-127);
+banshee2.move(127);
+}
+else{
+Intake.move(0);
+Intake.move(0);
+banshee2.move(0);
+}
+
+if(con.get_digital(E_CONTROLLER_DIGITAL_UP)){
+banshee.move(127);
+banshee.move(127);
+} else if(con.get_digital(E_CONTROLLER_DIGITAL_DOWN)){
+banshee.move(-127);
+banshee.move(-127);
+}
+else{
+banshee.move(0);
+banshee.move(0);
 
 if (tankToggle){
 	LF.move(con.get_analog(ANALOG_LEFT_Y));
@@ -216,13 +253,14 @@ if (time % 50 == 0 && time % 100 !=0 && time % 150 !=0){
 } else if (time% 100 == 0 && time % 150 !=0){
     con.print(1,0,"imu:%f      ", float(imu.get_heading()));//viewTime
 } else if (time % 150 == 0){
-    con.print(2,0,"C:%i H:%i LB:%i      ",int(chasstemp), int(Intake.get_temperature()), int(LadyBrown.get_temperature()));
+    con.print(2,0,"C:%i H:%i LB:%i      ",int(chasstemp), int(Intake.get_temperature()), int(cascade.get_temperature()));
 }
 
 delay(10);
 time += 10;
 
 }
-
+}
 
 }
+

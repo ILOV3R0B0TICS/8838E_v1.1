@@ -15,9 +15,12 @@ extern pros::Motor RB;
 
 extern pros::Motor Intake;
 extern pros::Motor cascade;
+extern pros::Motor cascade2;
+extern pros::Motor banshee;
+extern pros::Motor banshee2;
 
 extern pros::Imu imu;
-extern pros::Motor banshee; 
+extern pros::Optical eyes;
 extern pros::Rotation roto;
 extern pros::Distance dis;
 extern pros::Controller con;

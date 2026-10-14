@@ -1824,7 +1824,7 @@ time2 = 0;
 resetEncoders();
 
 ltarget = double((theta/360) *2 * pi * radius);
-rtarget = double((theta / 360) * 2 * pi *(radius + 725)); 
+rtarget = double((theta / 360) * 2 * pi *(radius + 596)); 
 
 while (true){
 
@@ -1905,7 +1905,7 @@ time2 = 0;
 resetEncoders();
 
 rtarget = double((theta/360) *2 * pi * radius);
-ltarget = double((theta / 360) * 2 * pi *(radius + 725)); 
+ltarget = double((theta / 360) * 2 * pi *(radius + 596)); 
 
 while (true){
 
@@ -1985,14 +1985,14 @@ int count = 0;
 bool over = false;
 resetEncoders();
 ltargetF = double(( theta/360) *2 * pi * radius);
-rtargetF = double((theta / 360) * 2 * pi *(radius + 725 ));
+rtargetF = double((theta / 360) * 2 * pi *(radius + 596));
 if(theta > 0){
 theta = theta + 45;
 } else {
     theta = theta - 45;
 }
 ltarget = double(( theta/360) *2 * pi * radius);
-rtarget = double((theta / 360) * 2 * pi *(radius + 725 ));
+rtarget = double((theta / 360) * 2 * pi *(radius + 596));
 while(true){
 
 if(trueTarget > 180){
@@ -2095,14 +2095,14 @@ int count = 0;
 int time2 = 0;
 resetEncoders();
 rtargetF = double((theta/360) *2 * pi * radius);
-ltargetF= double((theta / 360) * 2 * pi *(radius + 725)); 
+ltargetF= double((theta / 360) * 2 * pi *(radius + 596)); 
 if(theta > 0){
 theta = theta + 45;
 } else {
     theta = theta - 45;
 }
 rtarget = double((theta/360) *2 * pi * radius);
-ltarget = double((theta / 360) * 2 * pi *(radius + 725)); 
+ltarget = double((theta / 360) * 2 * pi *(radius + 596)); 
 
 while (true){
 

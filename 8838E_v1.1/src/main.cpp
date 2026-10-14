@@ -192,10 +192,10 @@ int turn = int(pow(RX, 3)/ 16129);
 int left= power + turn; 
 int right = power - turn;
 
-if(con.get_digital(E_CONTROLLER_DIGITAL_R2)){
+if(con.get_digital(E_CONTROLLER_DIGITAL_R1)){
 cascade.move(127);
 cascade2.move(127);
-} else if(con.get_digital(E_CONTROLLER_DIGITAL_R1)){
+} else if(con.get_digital(E_CONTROLLER_DIGITAL_R2)){
 cascade.move(-127);
 cascade2.move(-127);
 }
@@ -204,10 +204,10 @@ cascade.move(0);
 cascade2.move(0);
 }
 
-if(con.get_digital(E_CONTROLLER_DIGITAL_L1)){
+if(con.get_digital(E_CONTROLLER_DIGITAL_L2)){
 Intake.move(127);
 banshee2.move(-127);
-} else if(con.get_digital(E_CONTROLLER_DIGITAL_L2)){
+} else if(con.get_digital(E_CONTROLLER_DIGITAL_L1)){
 Intake.move(-127);
 banshee2.move(127);
 }
@@ -216,14 +216,15 @@ Intake.move(0);
 banshee2.move(20);
 }
 
-if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
+if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
 banshee.move(127);
-} else if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
+} else if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
 banshee.move(-127);
 }
 else{
 banshee.move(0);
 }
+
 
 if (tankToggle){
 	LF.move(con.get_analog(ANALOG_LEFT_Y));
@@ -251,10 +252,9 @@ if (time % 50 == 0 && time % 100 !=0 && time % 150 !=0){
     con.print(2,0,"C:%i H:%i LB:%i      ",int(chasstemp), int(Intake.get_temperature()), int(cascade.get_temperature()));
 }
 
+
 delay(10);
 time += 10;
 
 }
 }
-
-

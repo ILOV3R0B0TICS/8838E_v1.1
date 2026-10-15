@@ -420,7 +420,12 @@
   driveClampS(-750, 100, 75);
 
  }
- 
+ void Grab_Pin(){
+
+
+
+
+ }
  void autonomous(){
   if (atn == 0) {
   }else if (atn == 0) {

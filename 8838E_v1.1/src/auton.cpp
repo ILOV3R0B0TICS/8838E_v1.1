@@ -56,11 +56,11 @@ driveStraight2(-100);
 driveStraight2(180);
 driveStraight2(-100);
 driveStraight2(180);
-driveStraight2(-700);
+driveStraight2(-650);
 driveTurn2(-90);
 banshee2.move(-127);
-driveStraight2(-875);
-banshee.move(127);
+driveStraight2(-925);
+banshee.move(-127);
 
  }
  

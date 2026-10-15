@@ -226,8 +226,7 @@ banshee.move(0);
 }
 
 if(con.get_digital(E_CONTROLLER_DIGITAL_A)){
-//skill_run();
-driveStraight2(1000);
+skill_run();
 }
 
 if (tankToggle){

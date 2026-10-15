@@ -225,6 +225,10 @@ else{
 banshee.move(0);
 }
 
+if(con.get_digital(E_CONTROLLER_DIGITAL_A)){
+//skill_run();
+driveStraight2(1000);
+}
 
 if (tankToggle){
 	LF.move(con.get_analog(ANALOG_LEFT_Y));

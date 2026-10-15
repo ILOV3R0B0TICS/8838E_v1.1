@@ -6,9 +6,8 @@
 #define PIDH
 
 #define STRAIGHT_KP 1.05
-#define STRAIGHT_KI 0.15
-#define STRAIGHT_KD 14.25
-
+#define STRAIGHT_KI 0.05
+#define STRAIGHT_KD 11.75
 #define STRAIGHT_INTEGRAL_KI 40//
 #define STRAIGHT_MAX_INTEGRAL 14.5//
 

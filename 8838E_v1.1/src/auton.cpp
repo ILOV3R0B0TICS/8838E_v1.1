@@ -17,7 +17,7 @@
     driveStraightSlow(250, 50);
   }
 
- void Standard_AWP_red(){// Also retuned
+ void RightSide(){// Also retuned
 
  }
  void Goal_Rush_red(){ 
@@ -48,10 +48,19 @@
   }
 
   void Ring_Rush_blue(){ 
-   
+   banshee.move(127);
    }
  
  void skill_run(){
+driveStraight2(-100);
+driveStraight2(180);
+driveStraight2(-100);
+driveStraight2(180);
+driveStraight2(-700);
+driveTurn2(-90);
+banshee2.move(-127);
+driveStraight2(-875);
+banshee.move(127);
 
  }
  
@@ -61,7 +70,7 @@
     DriveStraightAuto();
   }
    else if (atn == 1) {
-    Standard_AWP_red();
+    RightSide();
   } 
   else if (atn ==2) {
    Standard_AWP_blue();

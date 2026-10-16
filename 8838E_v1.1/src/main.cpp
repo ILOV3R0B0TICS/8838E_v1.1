@@ -26,6 +26,8 @@ void on_center_button() {
 //bla bla bla
 
 void initialize() {
+
+startIndexerTask(); 
 	// pros::lcd::initialize();
 	// pros::lcd::set_text(1, "Hello PROS User!");
 

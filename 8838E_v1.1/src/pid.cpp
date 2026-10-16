@@ -482,7 +482,7 @@ void driveStraight(int target) {
     while (true){
         encoderAVG = (LF.get_position() + RF.get_position()) / 2;
          if(abs(target - encoderAVG) < 25){
-            setConstants(3, 0, 0);
+            setConstants(1.5, 0, 0);
         } else{
             setConstants(STRAIGHT_KP, STRAIGHT_KI, STRAIGHT_KD); 
         }   
@@ -835,7 +835,7 @@ void driveStraight2(int target) {
     while (true){
         encoderAVG = (LF.get_position() + RF.get_position()) / 2;
         if(abs(target - encoderAVG) < 25){
-            setConstants(3, 0, 0);
+            setConstants(1.05, 0, 0);
         } else{
             setConstants(STRAIGHT_KP, STRAIGHT_KI, STRAIGHT_KD); 
         }  
@@ -1737,7 +1737,7 @@ void driveStraightSlow(int target, int speed) { // RETUNE TIMEOUT!! SLOW PID!
     while (true){
         encoderAVG = (LF.get_position() + RF.get_position()) / 2;
         if(abs(target - encoderAVG) < 25){
-            setConstants(3, 0, 0);
+            setConstants(1.5, 0, 0);
         } else{
             setConstants(STRAIGHT_KP, STRAIGHT_KI, STRAIGHT_KD); 
         }   
@@ -1824,7 +1824,7 @@ time2 = 0;
 resetEncoders();
 
 ltarget = double((theta/360) *2 * pi * radius);
-rtarget = double((theta / 360) * 2 * pi *(radius + 725)); 
+rtarget = double((theta / 360) * 2 * pi *(radius + 596)); 
 
 while (true){
 
@@ -1905,7 +1905,7 @@ time2 = 0;
 resetEncoders();
 
 rtarget = double((theta/360) *2 * pi * radius);
-ltarget = double((theta / 360) * 2 * pi *(radius + 725)); 
+ltarget = double((theta / 360) * 2 * pi *(radius + 596)); 
 
 while (true){
 
@@ -1985,14 +1985,14 @@ int count = 0;
 bool over = false;
 resetEncoders();
 ltargetF = double(( theta/360) *2 * pi * radius);
-rtargetF = double((theta / 360) * 2 * pi *(radius + 725 ));
+rtargetF = double((theta / 360) * 2 * pi *(radius + 596));
 if(theta > 0){
 theta = theta + 45;
 } else {
     theta = theta - 45;
 }
 ltarget = double(( theta/360) *2 * pi * radius);
-rtarget = double((theta / 360) * 2 * pi *(radius + 725 ));
+rtarget = double((theta / 360) * 2 * pi *(radius + 596));
 while(true){
 
 if(trueTarget > 180){
@@ -2095,14 +2095,14 @@ int count = 0;
 int time2 = 0;
 resetEncoders();
 rtargetF = double((theta/360) *2 * pi * radius);
-ltargetF= double((theta / 360) * 2 * pi *(radius + 725)); 
+ltargetF= double((theta / 360) * 2 * pi *(radius + 596)); 
 if(theta > 0){
 theta = theta + 45;
 } else {
     theta = theta - 45;
 }
 rtarget = double((theta/360) *2 * pi * radius);
-ltarget = double((theta / 360) * 2 * pi *(radius + 725)); 
+ltarget = double((theta / 360) * 2 * pi *(radius + 596)); 
 
 while (true){
 

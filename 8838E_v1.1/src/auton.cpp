@@ -48,7 +48,7 @@
   }
 
   void Ring_Rush_blue(){ 
-   banshee.move(127);
+   banshee.move(-127);
    }
  
  void skill_run(){
@@ -59,7 +59,7 @@ driveStraight2(180);
 driveStraight2(-650);
 driveTurn2(-90);
 banshee2.move(-127);
-driveStraight2(-925);
+driveStraight2(-750);
 banshee.move(-127);
 
  }

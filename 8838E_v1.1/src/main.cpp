@@ -217,9 +217,9 @@ banshee2.move(20);
 }
 
 if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
-banshee.move(127);
-} else if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
 banshee.move(-127);
+} else if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
+banshee.move(127);
 }
 else{
 banshee.move(0);

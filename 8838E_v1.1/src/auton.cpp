@@ -58,7 +58,7 @@ driveStraight2(-100);
 driveStraight2(180);
 driveStraight2(-650);
 driveTurn2(-90);
-banshee2.move(-127);
+banshee2.move(127);
 driveStraight2(-750);
 banshee.move(-127);
 

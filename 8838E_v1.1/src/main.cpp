@@ -225,10 +225,13 @@ else{
 banshee.move(0);
 }
 
-if(con.get_digital(E_CONTROLLER_DIGITAL_A)){
+if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_A)){
 skill_run();
 }
+if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
+driveTurn2(30);
 
+}
 if (tankToggle){
 	LF.move(con.get_analog(ANALOG_LEFT_Y));
 	LM.move(con.get_analog(ANALOG_LEFT_Y));
@@ -248,7 +251,7 @@ RB.move(right);
 }
 double  chasstemp = ((RF.get_temperature() + RB.get_temperature() + LF.get_temperature() + LB.get_temperature())/4);
 if (time % 50 == 0 && time % 100 !=0 && time % 150 !=0){
-    con.print(0,0,"error:%f       ", float(error));//viewTime
+    con.print(0,0,"time:%f       ", float(time2));//viewTime
 } else if (time% 100 == 0 && time % 150 !=0){
     con.print(1,0,"imu:%f      ", float(imu.get_heading()));//viewTime
 } else if (time % 150 == 0){

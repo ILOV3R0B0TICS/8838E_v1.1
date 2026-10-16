@@ -819,7 +819,7 @@ void driveStraight2(int target) {
 
     double x = 0;
     x = double(abs(target));
-   timeout = (-0.000000000000750853* pow(x,5)) + (  0.00000000378468 * pow(x,4)) + (-0.00000629527 * pow(x,3)) + (0.00422834* pow(x,2)) + (-0.665814 * x) + 707.21366;
+   timeout = (-0.00000000000123484* pow(x,5)) + (  0.00000000627166 * pow(x,4)) + (-0.0000105716 * pow(x,3)) + (0.00724752* pow(x,2)) + (-1.45608 * x) + 748.0979;
     double voltage;
     double encoderAVG;
     int count = 0;
@@ -912,7 +912,8 @@ void driveStraightRush(int target) {
 
     double x = 0;
     x = double(abs(target));
-    timeout = (-0.000000000000750853* pow(x,5)) + (  0.00000000378468 * pow(x,4)) + (-0.00000629527 * pow(x,3)) + (0.00422834* pow(x,2)) + (-0.665814 * x) + 707.21366;    double voltage;
+    timeout = (-0.00000000000123484* pow(x,5)) + (  0.00000000627166 * pow(x,4)) + (-0.0000105716 * pow(x,3)) + (0.00724752* pow(x,2)) + (-1.45608 * x) + 748.0979;   
+    double voltage;
     double encoderAVG;
     int count = 0;
    // double init_heading = imu.get_heading();
@@ -1004,7 +1005,7 @@ void driveStraightC(int target) {
 
     double x = 0;
     x = double(abs(target));
-    timeout = (-0.000000000000750853* pow(x,5)) + (  0.00000000378468 * pow(x,4)) + (-0.00000629527 * pow(x,3)) + (0.00422834* pow(x,2)) + (-0.665814 * x) + 707.21366; 
+    timeout = (-0.00000000000123484* pow(x,5)) + (  0.00000000627166 * pow(x,4)) + (-0.0000105716 * pow(x,3)) + (0.00724752* pow(x,2)) + (-1.45608 * x) + 748.0979;
     if (target > 0){
     target = target + 500;
  } else{
@@ -1112,7 +1113,7 @@ void driveClamp(int target, int clampDistance) {
 
     double x = 0;
     x = double(abs(target));
-    timeout = (-0.000000000000750853* pow(x,5)) + (  0.00000000378468 * pow(x,4)) + (-0.00000629527 * pow(x,3)) + (0.00422834* pow(x,2)) + (-0.665814 * x) + 707.21366;    double voltage;
+    timeout = (-0.00000000000123484* pow(x,5)) + (  0.00000000627166 * pow(x,4)) + (-0.0000105716 * pow(x,3)) + (0.00724752* pow(x,2)) + (-1.45608 * x) + 748.0979;   double voltage;
     double encoderAVG;
     int count = 0;
     //double init_heading = imu.get_heading();
@@ -1207,7 +1208,7 @@ void driveClampS(int target, int clampDistanceFromTarget, int speed) {
 
     double x = 0;
     x = double(abs(target));
-    timeout = (-0.000000000000750853* pow(x,5)) + (  0.00000000378468 * pow(x,4)) + (-0.00000629527 * pow(x,3)) + (0.00422834* pow(x,2)) + (-0.665814 * x) + 707.21366;    timeout = timeout * (2 - (double(speed)/100.0));
+    timeout = (-0.00000000000123484* pow(x,5)) + (  0.00000000627166 * pow(x,4)) + (-0.0000105716 * pow(x,3)) + (0.00724752* pow(x,2)) + (-1.45608 * x) + 748.0979;   timeout = timeout * (2 - (double(speed)/100.0));
 
     double voltage;
     double encoderAVG;
@@ -1309,7 +1310,7 @@ void driveSortHoldRed(int target, int speed) {
 
     double x = 0;
     x = double(abs(target));
-    timeout = (-0.000000000000750853* pow(x,5)) + (  0.00000000378468 * pow(x,4)) + (-0.00000629527 * pow(x,3)) + (0.00422834* pow(x,2)) + (-0.665814 * x) + 707.21366;    timeout = timeout * (2 - (double(speed)/100.0));
+    timeout = (-0.00000000000123484* pow(x,5)) + (  0.00000000627166 * pow(x,4)) + (-0.0000105716 * pow(x,3)) + (0.00724752* pow(x,2)) + (-1.45608 * x) + 748.0979;   timeout = timeout * (2 - (double(speed)/100.0));
 
     double voltage;
     double encoderAVG;
@@ -1412,7 +1413,7 @@ void driveSortHoldblue(int target, int speed) {
 
     double x = 0;
     x = double(abs(target));
-    timeout = (-0.000000000000750853* pow(x,5)) + (  0.00000000378468 * pow(x,4)) + (-0.00000629527 * pow(x,3)) + (0.00422834* pow(x,2)) + (-0.665814 * x) + 707.21366;    timeout = timeout * (2 - (double(speed)/100.0));
+    timeout = (-0.00000000000123484* pow(x,5)) + (  0.00000000627166 * pow(x,4)) + (-0.0000105716 * pow(x,3)) + (0.00724752* pow(x,2)) + (-1.45608 * x) + 748.0979;   timeout = timeout * (2 - (double(speed)/100.0));
 
     double voltage;
     double encoderAVG;
@@ -1510,7 +1511,7 @@ void driveSortHoldRedC(int target, int speed) {
     bool over = false;
     double x = 0;
     x = double(abs(target));
-    timeout = (-0.000000000000750853* pow(x,5)) + (  0.00000000378468 * pow(x,4)) + (-0.00000629527 * pow(x,3)) + (0.00422834* pow(x,2)) + (-0.665814 * x) + 707.21366;    timeout = timeout * (2 - (double(speed)/100.0));
+    timeout = (-0.00000000000123484* pow(x,5)) + (  0.00000000627166 * pow(x,4)) + (-0.0000105716 * pow(x,3)) + (0.00724752* pow(x,2)) + (-1.45608 * x) + 748.0979;   timeout = timeout * (2 - (double(speed)/100.0));
 
     double voltage;
     double encoderAVG;
@@ -1615,7 +1616,7 @@ void driveSortHoldblueC(int target, int speed){
     bool over = false;
     double x = 0;
     x = double(abs(target));
-    timeout = (-0.000000000000750853* pow(x,5)) + (  0.00000000378468 * pow(x,4)) + (-0.00000629527 * pow(x,3)) + (0.00422834* pow(x,2)) + (-0.665814 * x) + 707.21366;    timeout = timeout * (2 - (double(speed)/100.0));
+    timeout = (-0.00000000000123484* pow(x,5)) + (  0.00000000627166 * pow(x,4)) + (-0.0000105716 * pow(x,3)) + (0.00724752* pow(x,2)) + (-1.45608 * x) + 748.0979;   timeout = timeout * (2 - (double(speed)/100.0));
 
     double voltage;
     double encoderAVG;
@@ -1720,7 +1721,7 @@ void driveStraightSlow(int target, int speed) { // RETUNE TIMEOUT!! SLOW PID!
 
     double x = 0;
     x = double(abs(target));
-    timeout = (-0.000000000000750853* pow(x,5)) + (  0.00000000378468 * pow(x,4)) + (-0.00000629527 * pow(x,3)) + (0.00422834* pow(x,2)) + (-0.665814 * x) + 707.21366;    timeout = timeout * (2 - (double(speed)/100.0));
+    timeout = (-0.00000000000123484* pow(x,5)) + (  0.00000000627166 * pow(x,4)) + (-0.0000105716 * pow(x,3)) + (0.00724752* pow(x,2)) + (-1.45608 * x) + 748.0979;   timeout = timeout * (2 - (double(speed)/100.0));
 
     double voltage;
     double encoderAVG;

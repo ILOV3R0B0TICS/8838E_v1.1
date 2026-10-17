@@ -2205,62 +2205,62 @@ void wallResetF(int resetTime){
     }
 }
 
-void Rings(int motorVoltage){
-    Intake.move(motorVoltage);
-}
+// void Rings(int motorVoltage){
+//     Intake.move(motorVoltage);
+// }
 
-#define Indexer banshee    
+// #define Indexer banshee    
 
-double indexerTarget = 0;  
-double iKp = 0.6;
+// double indexerTarget = 0;  
+// double iKp = 0.6;
 
-#define Indexer banshee
+// #define Indexer banshee
 
-double indexerTarget = 0;      // degrees
+// double indexerTarget = 0;      // degrees
 
-double iKp = 0.6;
-double iKi = 0.0;
-double iKd = 2.0;
-double iKg = 12;               // volts that just barely hold the indexer up
-const int I_ACTIVE_ZONE = 20;
-const int I_MAX = 2000;
+// double iKp = 0.6;
+// double iKi = 0.0;
+// double iKd = 2.0;
+// double iKg = 12;               // volts that just barely hold the indexer up
+// const int I_ACTIVE_ZONE = 20;
+// const int I_MAX = 2000;
 
-double iPrevError = 0;
-double iIntegral = 0;
+// double iPrevError = 0;
+// double iIntegral = 0;
 
-double calcIndexerPID(double target, double input){
-    double err = target - input;
+// double calcIndexerPID(double target, double input){
+//     double err = target - input;
 
-    if (abs(err) < I_ACTIVE_ZONE){
-        iIntegral += err;
-    } else {
-        iIntegral = 0;
-    }
-    if (iIntegral > I_MAX) iIntegral = I_MAX;
-    if (iIntegral < -I_MAX) iIntegral = -I_MAX;
+//     if (abs(err) < I_ACTIVE_ZONE){
+//         iIntegral += err;
+//     } else {
+//         iIntegral = 0;
+//     }
+//     if (iIntegral > I_MAX) iIntegral = I_MAX;
+//     if (iIntegral < -I_MAX) iIntegral = -I_MAX;
 
-    double deriv = err - iPrevError;
-    iPrevError = err;
+//     double deriv = err - iPrevError;
+//     iPrevError = err;
 
-    double out = (iKp * err) + (iKi * iIntegral) + (iKd * deriv) + iKg;
+//     double out = (iKp * err) + (iKi * iIntegral) + (iKd * deriv) + iKg;
 
-    if (out > 127) out = 127;
-    if (out < -127) out = -127;
-    return out;
-}
+//     if (out > 127) out = 127;
+//     if (out < -127) out = -127;
+//     return out;
+// }
 
-void indexerHold(){
-    double out = calcIndexerPID(indexerTarget, Indexer.get_position());
-    Indexer.move(out);
-    // banshee2.move(out);   // remove the // at the start if banshee2 is on the same mechanism
-}
+// void indexerHold(){
+//     double out = calcIndexerPID(indexerTarget, Indexer.get_position());
+//     Indexer.move(out);
+//     // banshee2.move(out);   // remove the // at the start if banshee2 is on the same mechanism
+// }
 
-void startIndexerTask(){
-    Indexer.tare_position();
-    Task indexerTask([](){
-        while (true){
-            indexerHold();
-            delay(10);
-        }
-    });
-}
+// void startIndexerTask(){
+//     Indexer.tare_position();
+//     Task indexerTask([](){
+//         while (true){
+//             indexerHold();
+//             delay(10);
+// //         }
+//     });
+// }

@@ -226,7 +226,7 @@ banshee.move(0);
 }
 
 if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_A)){
-RightSide();
+skill_run();
 }
 if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
 driveTurn2(30);

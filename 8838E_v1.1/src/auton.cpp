@@ -23,9 +23,9 @@ void RightSide()
   cascade2.move(70);
   delay(500);
   cascade2.move(0);
-  cascade.move(0);
+  cascade.move(0);//cascadeup and hold
   delay(250);
-    driveStraight2(-375);
+    driveStraight2(-375);//score preload
   driveStraightC(400);
   cascade.move(-70);
   cascade2.move(-70);
@@ -34,12 +34,12 @@ void RightSide()
   cascade2.move(0);
   driveTurn2(40);
   driveStraight2(-250);
-  driveStraight2(350);
-  driveStraightC(-150);
-  driveTurn2(15);
-  driveStraightC(-250);
-  driveTurn2(-18);
-  driveStraight2(-300);
+  driveStraight2(400);//toggle changed
+  driveStraightC(-275);
+  driveTurn2(25);
+  driveStraightC(-375);
+  driveTurn2(-15);
+  driveStraight2(-600);
   driveTurn2(-125);
    cascade.move(90);
   cascade2.move(90);
@@ -49,13 +49,44 @@ void RightSide()
   driveStraight2(-500);
   driveStraight2(250);
    cascade.move(-127);
-  cascade2.move(-127);
+  cascade2.move(-127);//second preload scored
 }
-void Goal_Rush_red()
+void LeftSide()
 {
+     cascade.move(70);
+  cascade2.move(70);
+  delay(500);
+  cascade2.move(0);
+  cascade.move(0);//cascadeup and hold
+  delay(250);
+    driveStraight2(-375);//score preload
+  driveStraightC(400);
+  cascade.move(-70);
+  cascade2.move(-70);
+  delay(500);
+   cascade.move(0);
+  cascade2.move(0);
+  driveTurn2(-30);
+  driveStraight2(-250);
+  driveStraight2(400);//toggle changed
+  driveStraightC(-275);
+  driveTurn2(-25);
+  driveStraightC(-375);
+  driveTurn2(15);
+  driveStraight2(-600);
+  driveTurn2(145);
+   cascade.move(90);
+  cascade2.move(90);
+  delay(500);
+  cascade2.move(5);
+  cascade.move(5);
+  driveStraight2(-575);
+  driveStraight2(250);
+   cascade.move(-127);
+  cascade2.move(-127);//second preload scored
 }
 
-void Ring_Rush_red()
+void Ring_Rush_Red()
 { // done
 }
 
@@ -83,11 +114,37 @@ void Ring_Rush_blue()
 
 void skill_run()
 {
-  driveStraight2(-100);
-  driveStraight2(180);
-  driveStraight2(-100);
-  driveStraight2(180);
-  driveStraight2(-1000);
+     cascade.move(70);
+  cascade2.move(70);
+  delay(500);
+  cascade2.move(0);
+  cascade.move(0);//cascadeup and hold
+  delay(250);
+    driveStraight2(-375);//score preload
+  driveStraightC(400);
+  cascade.move(-70);
+  cascade2.move(-70);
+  delay(500);
+   cascade.move(0);
+  cascade2.move(0);
+  driveTurn2(-30);
+  driveStraight2(-250);
+  driveStraight2(400);//toggle changed
+  driveStraightC(-275);
+  driveTurn2(-25);
+  driveStraightC(-375);
+  driveTurn2(15);
+  driveStraight2(-600);
+  driveTurn2(145);
+   cascade.move(90);
+  cascade2.move(90);
+  delay(500);
+  cascade2.move(5);
+  cascade.move(5);
+  driveStraight2(-575);
+  driveStraight2(250);
+   cascade.move(-127);
+  cascade2.move(-127);//second preload scored
 }
 void Grab_Pin()
 {
@@ -111,7 +168,7 @@ void autonomous()
   }
   else if (atn == 3)
   {
-    Goal_Rush_red();
+    LeftSide();
   }
   else if (atn == 4)
   {
@@ -127,7 +184,7 @@ void autonomous()
   }
   else if (atn == 7)
   {
-    Ring_Rush_red();
+    Ring_Rush_Red();
   }
   else if (atn == 8)
   {

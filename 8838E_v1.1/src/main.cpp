@@ -24,10 +24,8 @@ void on_center_button() {
 	}
 }//bla bla bla
 //bla bla bla
-
 void initialize() {
 
-startIndexerTask(); 
 	// pros::lcd::initialize();
 	// pros::lcd::set_text(1, "Hello PROS User!");
 
@@ -228,7 +226,7 @@ banshee.move(0);
 }
 
 if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_A)){
-DriveStraightAuto();
+RightSide();
 }
 if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
 driveTurn2(30);

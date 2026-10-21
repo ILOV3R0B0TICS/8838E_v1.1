@@ -12,4 +12,7 @@ extern void fiveRing();
 extern void skill_run();
 extern void DriveStraightAuto();
 extern  void Ring_Rush_blue();
+extern void Ring_Rush_red();
+extern void goal_safe_side_red();
+extern void RightSide();
 extern bool MogoMechToggle;

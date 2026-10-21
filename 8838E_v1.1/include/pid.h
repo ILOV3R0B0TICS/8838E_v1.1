@@ -91,8 +91,4 @@ extern int viewTime;
 #define MACRO_KI 0
 #define MACRO_KD 0
 
-extern double indexerTarget;
-extern void indexerHold();
-extern void startIndexerTask();
-
 #endif

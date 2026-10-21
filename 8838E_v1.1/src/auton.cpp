@@ -127,7 +127,7 @@ void skill_run()
   delay(500);
    cascade.move(0);
   cascade2.move(0);
-  driveTurn2(-30);
+  driveTurn2(-40);
   driveStraight2(-250);
   driveStraight2(400);//toggle changed
   driveStraightC(-275);
@@ -142,9 +142,18 @@ void skill_run()
   cascade2.move(5);
   cascade.move(5);
   driveStraight2(-575);
-  driveStraight2(250);
-   cascade.move(-127);
-  cascade2.move(-127);//second preload scored
+  driveStraightC(400);
+   cascade.move(0);
+  cascade2.move(0);//second scored
+  driveTurn2(105);
+  driveStraight2(-925);
+  driveTurn2(174);
+  cascade.move(-90);
+  cascade2.move(-90);
+  delay(500);
+  cascade2.move(0);
+  cascade.move(0);
+  driveStraight2(-1075);
 }
 void Grab_Pin()
 {

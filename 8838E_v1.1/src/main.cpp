@@ -174,6 +174,7 @@ bool MogoMechToggle = false;
 bool LBC = false;
 int Macro = 0;
 bool IntakePiston = false;
+bool claw= false;
 eyes.set_led_pwm(100);
 
 
@@ -216,17 +217,22 @@ Intake.move(0);
 banshee2.move(20);
 }
 
-if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
-banshee.move(-127);
-} else if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
-banshee.move(127);
+// if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
+// banshee.move(-127);
+// } else if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
+// banshee.move(127);
+// }
+// else{
+// banshee.move(0);
+// }
+
+if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_Y)){
+	claw = !claw;
 }
-else{
-banshee.move(0);
-}
+Claw.set_value(claw);
 
 if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_A)){
-skill_run();
+RightSide();
 }
 if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
 driveTurn2(30);

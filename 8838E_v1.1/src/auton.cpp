@@ -19,6 +19,7 @@ void DriveStraightAuto()
 
 void RightSide()
 {
+  Claw.set_value(false);
   cascade.move(70);
   cascade2.move(70);
   delay(500);
@@ -26,27 +27,40 @@ void RightSide()
   cascade.move(0);//cascadeup and hold
   delay(250);
     driveStraight2(-375);//score preload
+    cascade.move(-70);
+  cascade2.move(-70);
+  delay(500);
+    Claw.set_value(true);
+      delay(500);
   driveStraightC(400);
   cascade.move(-70);
   cascade2.move(-70);
-  delay(500);
    cascade.move(0);
   cascade2.move(0);
   driveTurn2(40);
   driveStraight2(-250);
   driveStraight2(400);//toggle changed
   driveStraightC(-275);
-  driveTurn2(25);
+  driveTurn2(35);
   driveStraightC(-375);
-  driveTurn2(-15);
-  driveStraight2(-600);
-  driveTurn2(-125);
-   cascade.move(90);
+  driveTurn2(-11.5);
+  driveStraightSlow(-550, 35);
+  Claw.set_value(false);
+  delay(500);
+ cascade.move(-90);
+  cascade2.move(-90);
+  delay(500);
+  cascade2.move(0);
+  cascade.move(0);
+  driveTurn2(-123);
+  driveStraight2(-500);
+  delay(1000);
+  Claw.set_value(true);
+  cascade.move(90);
   cascade2.move(90);
   delay(500);
-  cascade2.move(5);
-  cascade.move(5);
-  driveStraight2(-500);
+  cascade2.move(0);
+  cascade.move(0);
   driveStraight2(250);
    cascade.move(-127);
   cascade2.move(-127);//second preload scored

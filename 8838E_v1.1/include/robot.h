@@ -30,5 +30,5 @@ extern pros::ADIDigitalOut MogoMech;
 extern pros::ADIDigitalOut StakeWing;
 extern pros::ADIDigitalOut Intake_Piston;
 extern pros::ADIDigitalIn selec;
-
+extern pros::ADIDigitalOut Claw;
 #endif

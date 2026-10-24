@@ -187,7 +187,7 @@ banshee.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
 
 
 //chassis drive 
-int power = con.get_analog(ANALOG_LEFT_Y);
+int power = -con.get_analog(ANALOG_LEFT_Y);
 int RX = con.get_analog(ANALOG_RIGHT_X);
 int turn = int(pow(RX, 3)/ 16129);
 int left= power + turn; 

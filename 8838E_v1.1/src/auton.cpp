@@ -39,6 +39,8 @@ void RightSide()
   cascade2.move(0);
   driveTurn2(40);
   driveStraight2(-250);
+  driveStraight2(400);
+   driveStraight2(-250);
   driveStraight2(400);//toggle changed
   driveStraightC(-275);
   driveTurn2(35);
@@ -80,18 +82,22 @@ void LeftSide()
   delay(500);
     Claw.set_value(true);
       delay(500);
-  driveStraightC(400);
+  driveStraightC(300);
   cascade.move(-70);
   cascade2.move(-70);
    cascade.move(0);
   cascade2.move(0);
-  driveTurn2(-40);
+  driveTurn2(-30);
+  driveStraight2(-250);
+  driveStraight2(400);
   driveStraight2(-250);
   driveStraight2(400);//toggle changed
-  driveStraightC(-275);
+  driveStraightC(-50);
+  driveTurn2(-30);
+  driveStraightC(-300);
   driveTurn2(-35);
-  driveStraightC(-390);
-  driveTurn2(13.5);
+  driveStraightC(-350);
+  driveTurn2(12);
   driveStraightSlow(-540, 25);
   Claw.set_value(false);
   delay(500);
@@ -100,8 +106,8 @@ void LeftSide()
   delay(500);
   cascade2.move(0);
   cascade.move(0);
-  driveTurn2(129);
-  driveStraight2(-625);
+  driveTurn2(125);
+  driveStraight2(-850);
   delay(250);
   cascade.move(90);
   cascade2.move(90);

@@ -9,7 +9,7 @@ bool stay_clamp = true;
 using namespace pros;
 using namespace std;
 
-int atn = 0;
+int atn = 4;
 string autstr;
 // Task colorSortTask;
 // bool colorSortActive = false;
@@ -231,9 +231,9 @@ if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_Y)){
 }
 Claw.set_value(claw);
 
-if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_A)){
-RightSide();
-}
+// if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_A)){
+// RightSide();
+//}
 if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
 driveTurn2(30);
 

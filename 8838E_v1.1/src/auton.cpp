@@ -173,6 +173,31 @@ void LeftSide()
 
 void Ring_Rush_Red()
 { // done
+ 
+  cascade.move(70);
+  cascade2.move(70);
+  delay(500);
+  cascade2.move(0);
+  cascade.move(0);//cascadeup and hold
+  delay(250);
+    driveStraight2(-375);//score preload
+    cascade.move(-70);
+  cascade2.move(-70);
+  delay(500);
+  
+      delay(500);
+  driveStraightC(300);
+  cascade.move(-70);
+  cascade2.move(-70);
+   cascade.move(0);
+  cascade2.move(0);
+  driveTurn2(30);
+  driveStraight2(-250);
+  driveStraight2(400);
+  driveStraight2(-250);
+  driveStraight2(400);//toggle changed
+//  cored
+
 }
 
 void goal_safe_side_red()
@@ -181,7 +206,9 @@ void goal_safe_side_red()
 
 void Standard_AWP_blue()
 { // done
+driveStraight2(4000);
 }
+
 
 void Goal_Rush_Blue()
 { // incosistent, but done

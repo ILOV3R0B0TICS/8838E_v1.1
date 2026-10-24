@@ -42,60 +42,74 @@ void RightSide()
   driveStraight2(400);//toggle changed
   driveStraightC(-275);
   driveTurn2(35);
-  driveStraightC(-375);
-  driveTurn2(-11.5);
-  driveStraightSlow(-550, 35);
+  driveStraightC(-390);
+  driveTurn2(-11);
+  driveStraightSlow(-540, 25);
   Claw.set_value(false);
   delay(500);
- cascade.move(-90);
-  cascade2.move(-90);
+ cascade.move(-100);
+  cascade2.move(-100);
   delay(500);
   cascade2.move(0);
   cascade.move(0);
-  driveTurn2(-123);
-  driveStraight2(-500);
-  delay(1000);
-  Claw.set_value(true);
+  driveTurn2(-125);
+  driveStraight2(-575);
+  delay(250);
   cascade.move(90);
   cascade2.move(90);
   delay(500);
   cascade2.move(0);
   cascade.move(0);
-  driveStraight2(250);
+  Claw.set_value(true);
+  driveStraight2(300);
    cascade.move(-127);
   cascade2.move(-127);//second preload scored
 }
 void LeftSide()
 {
-     cascade.move(70);
+   Claw.set_value(false);
+  cascade.move(70);
   cascade2.move(70);
   delay(500);
   cascade2.move(0);
   cascade.move(0);//cascadeup and hold
   delay(250);
     driveStraight2(-375);//score preload
+    cascade.move(-70);
+  cascade2.move(-70);
+  delay(500);
+    Claw.set_value(true);
+      delay(500);
   driveStraightC(400);
   cascade.move(-70);
   cascade2.move(-70);
-  delay(500);
    cascade.move(0);
   cascade2.move(0);
-  driveTurn2(-30);
+  driveTurn2(-40);
   driveStraight2(-250);
   driveStraight2(400);//toggle changed
   driveStraightC(-275);
-  driveTurn2(-25);
-  driveStraightC(-375);
-  driveTurn2(15);
-  driveStraight2(-600);
-  driveTurn2(145);
-   cascade.move(90);
+  driveTurn2(-35);
+  driveStraightC(-390);
+  driveTurn2(13.5);
+  driveStraightSlow(-540, 25);
+  Claw.set_value(false);
+  delay(500);
+ cascade.move(-100);
+  cascade2.move(-100);
+  delay(500);
+  cascade2.move(0);
+  cascade.move(0);
+  driveTurn2(129);
+  driveStraight2(-625);
+  delay(250);
+  cascade.move(90);
   cascade2.move(90);
   delay(500);
-  cascade2.move(5);
-  cascade.move(5);
-  driveStraight2(-575);
-  driveStraight2(250);
+  cascade2.move(0);
+  cascade.move(0);
+  Claw.set_value(true);
+  driveStraight2(300);
    cascade.move(-127);
   cascade2.move(-127);//second preload scored
 }
@@ -128,46 +142,51 @@ void Ring_Rush_blue()
 
 void skill_run()
 {
-     cascade.move(70);
+ Claw.set_value(false);
+  cascade.move(70);
   cascade2.move(70);
   delay(500);
   cascade2.move(0);
   cascade.move(0);//cascadeup and hold
   delay(250);
     driveStraight2(-375);//score preload
+    cascade.move(-70);
+  cascade2.move(-70);
+  delay(500);
+    Claw.set_value(true);
+      delay(500);
   driveStraightC(400);
   cascade.move(-70);
   cascade2.move(-70);
-  delay(500);
    cascade.move(0);
   cascade2.move(0);
   driveTurn2(-40);
   driveStraight2(-250);
   driveStraight2(400);//toggle changed
   driveStraightC(-275);
-  driveTurn2(-25);
-  driveStraightC(-375);
-  driveTurn2(15);
-  driveStraight2(-600);
-  driveTurn2(145);
-   cascade.move(90);
-  cascade2.move(90);
+  driveTurn2(-35);
+  driveStraightC(-390);
+  driveTurn2(13.5);
+  driveStraightSlow(-540, 25);
+  Claw.set_value(false);
   delay(500);
-  cascade2.move(5);
-  cascade.move(5);
-  driveStraight2(-575);
-  driveStraightC(400);
-   cascade.move(0);
-  cascade2.move(0);//second scored
-  driveTurn2(105);
-  driveStraight2(-925);
-  driveTurn2(174);
-  cascade.move(-90);
-  cascade2.move(-90);
+ cascade.move(-100);
+  cascade2.move(-100);
   delay(500);
   cascade2.move(0);
   cascade.move(0);
-  driveStraight2(-1075);
+  driveTurn2(129);
+  driveStraight2(-625);
+  delay(250);
+  cascade.move(90);
+  cascade2.move(90);
+  delay(500);
+  cascade2.move(0);
+  cascade.move(0);
+  Claw.set_value(true);
+  driveStraight2(1300);
+  
+
 }
 void Grab_Pin()
 {
@@ -187,11 +206,11 @@ void autonomous()
   }
   else if (atn == 2)
   {
-    Standard_AWP_blue();
+    LeftSide();
   }
   else if (atn == 3)
   {
-    LeftSide();
+     Standard_AWP_blue();
   }
   else if (atn == 4)
   {

@@ -573,7 +573,7 @@ void driveStraight(int target) {
     while(true) { 
         position = imu.get_heading();
 
-        if (position > 180){
+        if (position > 180){double
             position = ((360 - position) * -1);
 
         }

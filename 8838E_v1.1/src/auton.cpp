@@ -199,7 +199,7 @@ void Ring_Rush_blue()
 
 void skill_run()
 {
- Claw.set_value(false);
+   Claw.set_value(false);
   cascade.move(70);
   cascade2.move(70);
   delay(500);
@@ -212,18 +212,22 @@ void skill_run()
   delay(500);
     Claw.set_value(true);
       delay(500);
-  driveStraightC(400);
+  driveStraightC(300);
   cascade.move(-70);
   cascade2.move(-70);
    cascade.move(0);
   cascade2.move(0);
-  driveTurn2(-40);
+  driveTurn2(-30);
+  driveStraight2(-250);
+  driveStraight2(400);
   driveStraight2(-250);
   driveStraight2(400);//toggle changed
-  driveStraightC(-275);
+  driveStraightC(-50);
+  driveTurn2(-30);
+  driveStraightC(-300);
   driveTurn2(-35);
-  driveStraightC(-390);
-  driveTurn2(13.5);
+  driveStraightC(-350);
+  driveTurn2(12);
   driveStraightSlow(-540, 25);
   Claw.set_value(false);
   delay(500);
@@ -232,8 +236,8 @@ void skill_run()
   delay(500);
   cascade2.move(0);
   cascade.move(0);
-  driveTurn2(129);
-  driveStraight2(-625);
+  driveTurn2(125);
+  driveStraight2(-850);
   delay(250);
   cascade.move(90);
   cascade2.move(90);
@@ -241,9 +245,13 @@ void skill_run()
   cascade2.move(0);
   cascade.move(0);
   Claw.set_value(true);
+  driveStraight2(300);
+   cascade.move(-127);
+  cascade2.move(-127);//second preload scored
+  delay(500);
+  cascade2.move(0);
+  cascade.move(0);
   driveStraight2(1300);
-  
-
 }
 void Grab_Pin()
 {

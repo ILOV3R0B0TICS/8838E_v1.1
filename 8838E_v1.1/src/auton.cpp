@@ -17,7 +17,7 @@ void DriveStraightAuto()
   driveStraightSlow(250, 50);
 }
 
-void RightSide()
+void LeftSide()
 {
 //   Claw.set_value(false);
 //   cascade.move(70);
@@ -67,24 +67,25 @@ void RightSide()
 //    cascade.move(-127);
 //   cascade2.move(-127);//second preload scored
 
- Claw.set_value(false);
-  cascade.move(70);
-  cascade2.move(70);
+ //Claw.set_value(false);
+  cascade.move(110);
+  cascade2.move(110);
   delay(500);
   cascade2.move(0);
   cascade.move(0);//cascadeup and hold
   delay(250);
     driveStraight2(-375);//score preload
-    cascade.move(-70);
-  cascade2.move(-70);
+    cascade.move(-90);
+  cascade2.move(-90);
   delay(500);
-    Claw.set_value(true);
+    banshee.move(-90);
       delay(500);
   driveStraightC(300);
   cascade.move(-70);
   cascade2.move(-70);
    cascade.move(0);
   cascade2.move(0);
+  banshee.move(90);
   driveTurn2(30);
   driveStraight2(-250);
   driveStraight2(400);
@@ -95,9 +96,9 @@ void RightSide()
   driveStraightC(-300);
   driveTurn2(35);
   driveStraightC(-350);
-  driveTurn2(-12);
-  driveStraightSlow(-540, 25);
-  Claw.set_value(false);
+  driveTurn2(-14);
+  driveStraightSlow(-590, 25);
+  banshee.move(90);
   delay(500);
  cascade.move(-100);
   cascade2.move(-100);
@@ -118,9 +119,9 @@ void RightSide()
   cascade2.move(-127);//second preload scored
 
 }
-void LeftSide()
+void RightSide()
 {
-   Claw.set_value(false);
+   banshee.move(90);
   cascade.move(70);
   cascade2.move(70);
   delay(500);
@@ -150,7 +151,7 @@ void LeftSide()
   driveStraightC(-350);
   driveTurn2(12);
   driveStraightSlow(-540, 25);
-  Claw.set_value(false);
+  banshee.move(90);
   delay(500);
  cascade.move(-100);
   cascade2.move(-100);
@@ -226,7 +227,7 @@ void Ring_Rush_blue()
 
 void skill_run()
 {
-   Claw.set_value(false);
+   banshee.move(90);
   cascade.move(70);
   cascade2.move(70);
   delay(500);
@@ -256,7 +257,7 @@ void skill_run()
   driveStraightC(-350);
   driveTurn2(12);
   driveStraightSlow(-540, 25);
-  Claw.set_value(false);
+  banshee.move(90);
   delay(500);
  cascade.move(-100);
   cascade2.move(-100);

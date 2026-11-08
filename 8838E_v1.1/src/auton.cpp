@@ -74,7 +74,7 @@ void LeftSide()
   cascade2.move(0);
   cascade.move(0);//cascadeup and hold
   delay(250);
-    driveStraight2(-375);//score preload
+    driveStraight2(-450);//score preload
     cascade.move(-90);
   cascade2.move(-90);
   delay(500);
@@ -87,30 +87,35 @@ void LeftSide()
   cascade2.move(0);
   banshee.move(90);
   driveTurn2(30);
-  driveStraight2(-250);
-  driveStraight2(400);
-  driveStraight2(-250);
-  driveStraight2(400);//toggle changed
-  driveStraightC(-50);
+  driveStraightC(400);
   driveTurn2(30);
+  delay(250);
+  driveStraight2(-150);
+  driveStraightSlow(450, 50);
+  delay(250);
+  // driveStraight2(0);
+  // driveStraightSlow(0, 50);
+  // delay(250);//toggle changed
+  driveStraightC(-150);
+  driveTurn2(45);
   driveStraightC(-300);
   driveTurn2(35);
   driveStraightC(-350);
-  driveTurn2(-14);
-  driveStraightSlow(-590, 25);
+  driveTurn2(-12);
+  driveStraightSlow(-705, 25);
   banshee.move(90);
   delay(500);
- cascade.move(-100);
-  cascade2.move(-100);
-  delay(500);
-  cascade2.move(0);
+  cascade2.move(-127);
+  cascade.move(-127);
+    delay(1000);
   cascade.move(0);
-  driveTurn2(-125);
-  driveStraight2(-850);
+  cascade2.move(0);
+  driveTurn2(-135);
+  driveStraightSlow(-900, 25);
   delay(250);
-  cascade.move(90);
-  cascade2.move(90);
-  delay(500);
+  cascade.move(127);
+  cascade2.move(127);
+  delay(1000);
   cascade2.move(0);
   cascade.move(0);
   Claw.set_value(true);
@@ -121,49 +126,54 @@ void LeftSide()
 }
 void RightSide()
 {
-   banshee.move(90);
-  cascade.move(70);
-  cascade2.move(70);
+  cascade.move(110);
+  cascade2.move(110);
   delay(500);
   cascade2.move(0);
   cascade.move(0);//cascadeup and hold
   delay(250);
-    driveStraight2(-375);//score preload
-    cascade.move(-70);
-  cascade2.move(-70);
+    driveStraight2(-450);//score preload
+    cascade.move(-90);
+  cascade2.move(-90);
   delay(500);
-    Claw.set_value(true);
+    banshee.move(-90);
       delay(500);
   driveStraightC(300);
   cascade.move(-70);
   cascade2.move(-70);
    cascade.move(0);
   cascade2.move(0);
+  banshee.move(90);
   driveTurn2(-30);
-  driveStraight2(-250);
-  driveStraight2(400);
-  driveStraight2(-250);
-  driveStraight2(400);//toggle changed
-  driveStraightC(-50);
+  driveStraightC(400);
   driveTurn2(-30);
+  delay(250);
+  driveStraight2(-150);
+  driveStraightSlow(450, 50);
+  delay(250);
+  // driveStraight2(0);
+  // driveStraightSlow(0, 50);
+  // delay(250);//toggle changed
+  driveStraightC(-150);
+  driveTurn2(-45);
   driveStraightC(-300);
   driveTurn2(-35);
   driveStraightC(-350);
   driveTurn2(12);
-  driveStraightSlow(-540, 25);
+  driveStraightSlow(-705, 25);
   banshee.move(90);
   delay(500);
- cascade.move(-100);
-  cascade2.move(-100);
-  delay(500);
-  cascade2.move(0);
+  cascade2.move(-127);
+  cascade.move(-127);
+    delay(1000);
   cascade.move(0);
-  driveTurn2(125);
-  driveStraight2(-850);
+  cascade2.move(0);
+  driveTurn2(135);
+  driveStraightSlow(-900, 25);
   delay(250);
-  cascade.move(90);
-  cascade2.move(90);
-  delay(500);
+  cascade.move(127);
+  cascade2.move(127);
+  delay(1000);
   cascade2.move(0);
   cascade.move(0);
   Claw.set_value(true);

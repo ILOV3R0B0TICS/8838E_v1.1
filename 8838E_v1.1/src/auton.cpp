@@ -149,7 +149,7 @@ void RightSide()
   driveTurn2(-30);
   delay(250);
   driveStraight2(-150);
-  driveStraightSlow(450, 50);
+  driveStraightSlow(450, 25);
   delay(250);
   // driveStraight2(0);
   // driveStraightSlow(0, 50);
@@ -158,7 +158,7 @@ void RightSide()
   driveTurn2(-45);
   driveStraightC(-300);
   driveTurn2(-35);
-  driveStraightC(-350);
+  driveStraightC(-500);
   driveTurn2(1);
   driveStraightSlow(-705, 25);
   banshee.move(90);

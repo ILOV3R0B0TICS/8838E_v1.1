@@ -124,6 +124,7 @@ void LeftSide()
   cascade2.move(-127);//second preload scored
 
 }
+
 void RightSide()
 {
   cascade.move(110);
@@ -138,7 +139,8 @@ void RightSide()
   delay(500);
     banshee.move(-90);
       delay(500);
-  driveStraightC(300);
+      driveStraightCSlow(300, 100);
+
   cascade.move(-70);
   cascade2.move(-70);
    cascade.move(0);
@@ -148,8 +150,11 @@ void RightSide()
   driveStraightC(400);
   driveTurn2(-30);
   delay(250);
-  driveStraight2(-150);
-  driveStraightSlow(450, 25);
+  driveStraight2(-300);
+  driveStraightCSlow(450, 100);
+  delay(250);
+  driveStraight2(-300);
+  driveStraightCSlow(450, 100);
   delay(250);
   // driveStraight2(0);
   // driveStraightSlow(0, 50);
@@ -158,9 +163,10 @@ void RightSide()
   driveTurn2(-45);
   driveStraightC(-300);
   driveTurn2(-35);
-  driveStraightC(-500);
+  
+  driveStraightC(-360);
   driveTurn2(1);
-  driveStraightSlow(-705, 25);
+  driveStraightSlow(-850, 25);
   banshee.move(90);
   delay(500);
   cascade2.move(-127);

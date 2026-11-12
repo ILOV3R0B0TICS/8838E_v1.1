@@ -282,7 +282,7 @@ void skill_run()
     driveStraight2(-700);
     cascade2.move(0);
   cascade.move(0);
-  driveStraight2(200);
+  driveStraight2(-300);
     cascade.move(90);
   cascade2.move(90);
     banshee.move(-127);

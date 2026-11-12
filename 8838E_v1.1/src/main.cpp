@@ -207,14 +207,14 @@ cascade2.move(0);
 
 if(con.get_digital(E_CONTROLLER_DIGITAL_L2)){
 Intake.move(127);
-banshee2.move(-127);
+banshee.move(-127);
 } else if(con.get_digital(E_CONTROLLER_DIGITAL_L1)){
 Intake.move(-127);
-banshee2.move(127);
+banshee.move(127);
 }
 else{
 Intake.move(0);
-banshee2.move(20);
+banshee.move(30);
 }
 
 // if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
@@ -231,9 +231,9 @@ if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_Y)){
 }
 Claw.set_value(claw);
 
-// if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_A)){
-// RightSide();
-//}
+ if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_A)){
+skill_run();
+}
 if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
 driveTurn2(30);
 

@@ -18,7 +18,7 @@
 #define DISTANCE_PORT 19
 #define ROTATION_PORT 4
 #define banshee_PORT 2
-#define banshee2_PORT 11
+
 
 
 pros::Motor LF (LF_PORT, pros::E_MOTOR_GEARSET_06, true); //keep
@@ -32,7 +32,6 @@ pros::Motor Intake (Intake_port, pros::E_MOTOR_GEARSET_06, true);
 pros::Motor cascade (cascade_port, pros::E_MOTOR_GEARSET_18, false);
 pros::Motor cascade2 (cascade2_port, pros::E_MOTOR_GEARSET_18, true);
 pros::Motor banshee (banshee_PORT, pros::E_MOTOR_GEARSET_06, true);
-pros::Motor banshee2 (banshee2_PORT, pros::E_MOTOR_GEARSET_06, true);
 
 pros::Imu imu(IMU_PORT);
 pros::Optical eyes(OPTICAL_PORT);

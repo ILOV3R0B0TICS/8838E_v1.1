@@ -7,7 +7,7 @@
 
 #define STRAIGHT_KP 1.05
 #define STRAIGHT_KI 0.05
-#define STRAIGHT_KD 11.75
+#define STRAIGHT_KD 13.25
 #define STRAIGHT_INTEGRAL_KI 40//
 #define STRAIGHT_MAX_INTEGRAL 14.5//
 
@@ -18,6 +18,7 @@ extern void ColorSort();
 extern void driveStraight(int target);
 extern void driveStraight2(int target);
 extern void driveStraightC(int target);
+extern void driveStraightCSlow(int target, int speed);
 extern void driveTurn(int target);
 extern void driveTurn2(int target);
 extern void driveStraightSlow(int target, int speed);

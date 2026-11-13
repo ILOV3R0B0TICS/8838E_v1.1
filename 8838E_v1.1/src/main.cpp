@@ -214,7 +214,10 @@ banshee.move(127);
 }
 else{
 Intake.move(0);
-banshee.move(30);
+banshee.move(127);
+// delay(5000);
+// RightSide();
+
 }
 
 // if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){

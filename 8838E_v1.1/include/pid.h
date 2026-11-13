@@ -7,7 +7,7 @@
 
 #define STRAIGHT_KP 1.05
 #define STRAIGHT_KI 0.05
-#define STRAIGHT_KD 13.25
+#define STRAIGHT_KD 20
 #define STRAIGHT_INTEGRAL_KI 40//
 #define STRAIGHT_MAX_INTEGRAL 14.5//
 
@@ -21,6 +21,7 @@ extern void driveStraightC(int target);
 extern void driveStraightCSlow(int target, int speed);
 extern void driveTurn(int target);
 extern void driveTurn2(int target);
+extern void driveTurn2Slow(int target, int speed);
 extern void driveStraightSlow(int target, int speed);
 extern void driveIntake(int target, int start, int stop);
 extern void driveClamp (int target, int clampDistance);
@@ -84,7 +85,7 @@ extern int viewTime;
 //arc turn stuff
 #define ARC_HEADING_KP 2.0 //make it bigger untill u can see it correcting along the path // 40
 #define ARC_HEADING_KI 0
-#define ARC_HEADING_KD 25 // make it bigger untill it is smooth //18
+#define ARC_HEADING_KD 45 // make it bigger untill it is smooth //18
 #define ARC_HEADING_MAX_INTEGRAL 0
 #define ARC_HEADING_INTEGRAL_KI 0 // to- do list, tune 
 

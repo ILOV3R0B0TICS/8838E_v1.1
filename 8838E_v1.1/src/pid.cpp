@@ -714,6 +714,139 @@ void driveStraight(int target) {
 }
 
 
+void driveTurn2Slow(int target, int speed){
+
+    int turnv;
+    double voltage;
+    double position;
+    int count = 0;
+    time2 = 0;
+    trueTarget = target;
+
+    position = imu.get_heading();
+
+    if(position > 180){
+        position = ((360 - position)*-1);
+    }
+
+    if ((target < 0) && (position > 0)){
+        if ((position - target) >= 180){
+            target = target + 360;
+            position = imu.get_heading();
+            turnv = (target - position);
+        } else {
+            turnv = (abs(position) + abs(target));
+        }
+    } else if ((target > 0) && (position < 0)){
+        if((target - position) >= 180){
+            position = imu.get_heading();
+            turnv = (abs(position) - abs(target));
+        } else {
+            turnv = (abs(position) + target);
+        }
+    } else {
+        turnv = abs(abs(position) - abs(target));
+    }
+
+    int timeout = 1000000;
+    double x = 0;
+    x = double(abs(turnv));
+
+    timeout = (-0.000000141031*pow(x,5))
+            + (0.0000650427*pow(x,4))
+            + (-0.0105768*pow(x,3))
+            + (0.678481*pow(x,2))
+            + (-8.01221*(x))
+            + 353.39229;
+
+    // Adjust timeout based on speed
+    timeout = timeout * (2 - (double(speed)/100.0));
+
+    while(true) {
+
+        if(abs(error) <= 3){
+            setConstants(10, 0, 0);
+        } else {
+            setConstants(TURN_KP, TURN_KI, TURN_KD);
+        }
+
+        position = imu.get_heading();
+
+        if(position > 180){
+            position = ((360 - position)*-1);
+        }
+
+        if ((target < 0) && (position > 0)){
+            if ((position - target) >= 180){
+                target = target + 360;
+                position = imu.get_heading();
+                turnv = (target - position);
+            } else {
+                turnv = (abs(position) + abs(target));
+            }
+        } else if ((target > 0) && (position < 0)){
+            if((target - position) >= 180){
+                position = imu.get_heading();
+                turnv = (abs(position) - abs(target));
+            } else {
+                turnv = (abs(position) + target);
+            }
+        } else {
+            turnv = abs(abs(position) - abs(target));
+        }
+
+        voltage = calcPID(target, position,
+                          TURN_INTRGRAL_KI,
+                          TURN_MAX_INTEGRAL);
+
+        // Limit turning power based on speed
+        if(voltage > 127 * double(speed)/100){
+            voltage = 127 * double(speed)/100;
+        } else if(voltage < -127 * double(speed)/100){
+            voltage = -127 * double(speed)/100;
+        }
+
+        chasMove(voltage, voltage, voltage,
+                 -voltage, -voltage, -voltage);
+
+        if(abs(target - position) <= 0.95){
+            count++;
+        }
+
+        if(count >= 20 || time2 > timeout){
+            break;
+        }
+
+        if(time2 % 50 == 0 && time2 % 100 != 0 && time2 % 150 != 0){
+            con.print(0,0, "ERROR: %f           ", float(error));
+        }
+
+        if(time2 % 50 == 0 && time2 % 100 != 0){
+            con.print(2,0, "EncoderAVG: %f           ", float(imu.get_heading()));
+        }
+
+        if(time2 % 50 == 0){
+            con.print(1,0, "Time2: %f           ", float(time2));
+        }
+
+        time2 += 10;
+        delay(10);
+    }
+
+    LF.brake();
+    LM.brake();
+    LB.brake();
+    RF.brake();
+    RM.brake();
+    RB.brake();
+
+}
+
+
+
+
+
+
 void driveTurnT(int target){
     int turnv;
     double voltage;
@@ -835,7 +968,7 @@ void driveStraight2(int target) {
     while (true){
         encoderAVG = (LF.get_position() + RF.get_position()) / 2;
         if(abs(target - encoderAVG) < 25){
-            setConstants(1.05, 0, 0);
+            setConstants(1.00, 0, 0);
         } else{
             setConstants(STRAIGHT_KP, STRAIGHT_KI, STRAIGHT_KD); 
         }  

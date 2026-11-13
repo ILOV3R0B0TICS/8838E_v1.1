@@ -19,55 +19,6 @@ void DriveStraightAuto()
 
 void LeftSide()
 {
-//   Claw.set_value(false);
-//   cascade.move(70);
-//   cascade2.move(70);
-//   delay(500);
-//   cascade2.move(0);
-//   cascade.move(0);//cascadeup and hold
-//   delay(250);
-//     driveStraight2(-375);//score preload
-//     cascade.move(-70);
-//   cascade2.move(-70);
-//   delay(500);
-//     Claw.set_value(true);
-//       delay(500);
-//   driveStraightC(400);
-//   cascade.move(-70);
-//   cascade2.move(-70);
-//    cascade.move(0);
-//   cascade2.move(0);
-//   driveTurn2(40);
-//   driveStraight2(-250);
-//   driveStraight2(400);
-//    driveStraight2(-250);
-//   driveStraight2(400);//toggle changed
-//   driveStraightC(-275);
-//   driveTurn2(35);
-//   driveStraightC(-390);
-//   driveTurn2(-11);
-//   driveStraightSlow(-540, 25);
-//   Claw.set_value(false);
-//   delay(500);
-//  cascade.move(-100);
-//   cascade2.move(-100);
-//   delay(500);
-//   cascade2.move(0);
-//   cascade.move(0);
-//   driveTurn2(-125);
-//   driveStraight2(-575);
-//   delay(250);
-//   cascade.move(90);
-//   cascade2.move(90);
-//   delay(500);
-//   cascade2.move(0);
-//   cascade.move(0);
-//   Claw.set_value(true);
-//   driveStraight2(300);
-//    cascade.move(-127);
-//   cascade2.move(-127);//second preload scored
-
- //Claw.set_value(false);
   cascade.move(110);
   cascade2.move(110);
   delay(500);
@@ -78,53 +29,33 @@ void LeftSide()
     cascade.move(-90);
   cascade2.move(-90);
   delay(500);
-   cascade.move(0);
+  cascade.move(0);
   cascade2.move(0);
     banshee.move(-90);
-      delay(500);
-  driveStraightC(-300);
-  cascade.move(-70);
-  cascade2.move(-70);
-   cascade.move(0);
-  cascade2.move(0);
-  banshee.move(90);
-  driveTurn2(30);
-  driveStraightC(400);
-  driveTurn2(30);
-  delay(250);
-  driveStraight2(-150);
-  driveStraightSlow(450, 50);
-  delay(250);
-  // driveStraight2(0);
-  // driveStraightSlow(0, 50);
-  // delay(250);//toggle changed
-  driveStraightC(-150);
-  driveTurn2(45);
-  driveStraightC(-300);
-  driveTurn2(35);
-  driveStraightC(-350);
-  driveTurn2(-3);
-  driveStraightSlow(-705, 25);
-  banshee.move(90);
+      delay(300);
+    driveArcL(45, 200, 1500, 50);
+    driveTurn2(45);
+    driveStraight2(-500);
+    banshee.move(90);
+      driveArcR(-46, 600, 1200, 50);
+  driveStraightSlow(-500, 25);
   delay(500);
   cascade2.move(-127);
   cascade.move(-127);
     delay(1000);
-  cascade.move(0);
-  cascade2.move(0);
   driveTurn2(-135);
   driveStraightSlow(-900, 25);
+     cascade.move(0);
+  cascade2.move(0);
   delay(250);
   cascade.move(127);
   cascade2.move(127);
   delay(1000);
-  cascade2.move(0);
+     cascade2.move(0);
   cascade.move(0);
-  Claw.set_value(true);
   driveStraight2(300);
-   cascade.move(-127);
-  cascade2.move(-127);//second preload scored
-
+   cascade.move(0);
+  cascade2.move(0);
 }
 
 void RightSide()
@@ -288,14 +219,14 @@ void skill_run()
   delay(500);
   cascade2.move(0);
   cascade.move(0);
-  driveStraight2(-3500);
+  driveStraight2(-400);
   driveTurn2(180);
   cascade.move(100);
   cascade2.move(100);
   delay(500);
   cascade2.move(0);
   cascade.move(0);//cascadeup and hold
-  driveStraight2(-1000);
+  driveStraight2(-1200);
   cascade.move(-100);
   cascade2.move(-100);
   delay(500);
@@ -304,7 +235,7 @@ void skill_run()
   banshee.move(-127);
   Intake.move(-127);//cup and pin #1 scored
   delay(500);
-   driveStraight2(1000);
+   driveStraight2(1100);
   driveTurn2(135);
   banshee.move(127);
   cascade.move(-50);
@@ -312,20 +243,20 @@ void skill_run()
   delay(500);
   cascade2.move(0);
   cascade.move(0);
-  driveStraightSlow(-1500, 25);
+  driveStraightSlow(-1600, 25);
    cascade.move(80);
   cascade2.move(80);
   delay(500);
   cascade2.move(0);
   cascade.move(0);
-  driveStraight2(-250);
-  driveTurn2(-90);
+  driveStraight2(-400);
+  driveTurn2(-95);
   cascade.move(127);
   cascade2.move(127);
   delay(1000);
   cascade2.move(0);
   cascade.move(0);//cascadeup and hold
-  driveStraight2(-1000);
+  driveStraight2(-1500);
   cascade.move(-100);
   cascade2.move(-100);
   delay(500);
@@ -334,20 +265,21 @@ void skill_run()
   banshee.move(-127);
   Intake.move(-127);//cup and pin #2 scored
   delay(500);
-  driveStraight2(2000);
+  driveStraightSlow(1750, 50);
+  banshee.move(127);
    cascade.move(-100);
   cascade2.move(-100);
   delay(500);
   cascade2.move(0);
   cascade.move(0);
   driveTurn2(180);
-  driveStraight2(-300);
+  driveStraight2(-600);
    cascade.move(50);
   cascade2.move(50);
   delay(500);
   cascade2.move(0);
   cascade.move(0);
-  driveStraight2(300);
+  driveStraight2(600);
   driveTurn2(-90);
   cascade.move(127);
   cascade2.move(127);
@@ -361,9 +293,9 @@ void skill_run()
   cascade2.move(0);
   cascade.move(0);
   banshee.move(-127);
-  Intake.move(-127);//cup and pin #2 scored
+  Intake.move(-127);//cup and pin #3 scored
   delay(500);
-  driveStraight2(2000);
+  driveStraightSlow(2000, 50);
 
 
 

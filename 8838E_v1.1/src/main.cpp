@@ -234,9 +234,6 @@ if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_Y)){
 }
 Claw.set_value(claw);
 
- if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_A)){
-LeftSide();
-}
 if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
 driveTurn2(30);
 

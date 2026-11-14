@@ -211,7 +211,7 @@ banshee.move(-127);
 else{
 Intake.move(0);
 //banshee.move(127);
-banshee.move(20);
+banshee.move(90);
 // delay(5000);
 // RightSide();
 
@@ -225,11 +225,11 @@ banshee.move(0);
 }
 
 
-//Claw.set_value(claw);
-RatcheetClaw.move(claw ? -127 : 95);
+// //Claw.set_value(claw);
+// RatcheetClaw.move(claw ? -127 : 95);
 
-if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
-driveTurn2(30);
+// if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
+// driveTurn2(30);
 
 }
 if (tankToggle){
@@ -266,4 +266,3 @@ time += 10;
 
 }
 
-}

@@ -18,7 +18,7 @@ extern pros::Motor cascade;
 extern pros::Motor cascade2;
 extern pros::Motor banshee;
 extern pros::Motor banshee2;
-extern pros::Motor RatcheetClaw;
+
 
 extern pros::Imu imu;
 extern pros::Optical eyes;

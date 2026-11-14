@@ -9,7 +9,7 @@ bool stay_clamp = true;
 using namespace pros;
 using namespace std;
 
-int atn = 9;
+int atn = 2;
 string autstr;
 // Task colorSortTask;
 // bool colorSortActive = false;
@@ -22,6 +22,8 @@ void on_center_button() {
 	} else {
 		pros::lcd::clear_line(2);
 	}
+
+
 }//bla bla bla
 //bla bla bla
 void initialize() {

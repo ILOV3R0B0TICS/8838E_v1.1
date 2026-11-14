@@ -9,7 +9,7 @@ bool stay_clamp = true;
 using namespace pros;
 using namespace std;
 
-int atn = 1;
+int atn = 2;
 string autstr;
 // Task colorSortTask;
 // bool colorSortActive = false;
@@ -209,20 +209,15 @@ if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
 banshee.move(-127);
 }
 else{
-Intake.move(0);
+// Intake.move(0);
 //banshee.move(127);
 banshee.move(90);
-// delay(5000);
-// RightSide();
 
-if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
-banshee.move(-127);
-} else if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
+
+if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
 banshee.move(127);
 }
-else{
-banshee.move(0);
-}
+
 
 
 // //Claw.set_value(claw);

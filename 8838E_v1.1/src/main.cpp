@@ -215,19 +215,16 @@ banshee.move(20);
 // delay(5000);
 // RightSide();
 
-// if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
-// banshee.move(-127);
-// } else if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
-// banshee.move(127);
-// }
-// else{
-// banshee.move(0);
-// }
-
-
-if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_Y)){
-	claw = !claw;
+if(con.get_digital(E_CONTROLLER_DIGITAL_Y)){
+banshee.move(-127);
+} else if(con.get_digital(E_CONTROLLER_DIGITAL_B)){
+banshee.move(127);
 }
+else{
+banshee.move(0);
+}
+
+
 //Claw.set_value(claw);
 RatcheetClaw.move(claw ? -127 : 95);
 

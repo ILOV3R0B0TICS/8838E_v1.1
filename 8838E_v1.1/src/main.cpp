@@ -224,6 +224,7 @@ banshee.move(20);
 // banshee.move(0);
 // }
 
+
 if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_Y)){
 	claw = !claw;
 }
@@ -268,3 +269,4 @@ time += 10;
 
 }
 
+}

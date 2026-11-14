@@ -58,8 +58,8 @@ void LeftSide()
   cascade2.move(0);
   driveTurn2(270);
   driveArcR(120, 200, 1200, 50);
-  driveStraight2(1300);
-  driveStraight2(-250);
+  driveStraight2(1600);
+  driveStraight2(-400);
  driveStraight2(1100);
 
 }

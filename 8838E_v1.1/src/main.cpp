@@ -210,8 +210,8 @@ banshee.move(-127);
 }
 else{
 Intake.move(0);
-banshee.move(95);
-}
+//banshee.move(127);
+banshee.move(20);
 // delay(5000);
 // RightSide();
 
@@ -223,6 +223,12 @@ banshee.move(95);
 // else{
 // banshee.move(0);
 // }
+
+if (con.get_digital_new_press(E_CONTROLLER_DIGITAL_Y)){
+	claw = !claw;
+}
+//Claw.set_value(claw);
+RatcheetClaw.move(claw ? -127 : 95);
 
 if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
 driveTurn2(30);

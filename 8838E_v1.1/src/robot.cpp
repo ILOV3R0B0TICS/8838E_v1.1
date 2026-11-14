@@ -10,6 +10,7 @@
 #define RF_PORT 6
 #define RM_PORT 100 
 #define RB_PORT 7
+#define RatcheetClaw_port 2
 #define IMU_PORT 5
 #define Intake_port 3
 #define cascade_port 4
@@ -32,6 +33,7 @@ pros::Motor Intake (Intake_port, pros::E_MOTOR_GEARSET_06, true);
 pros::Motor cascade (cascade_port, pros::E_MOTOR_GEARSET_18, false);
 pros::Motor cascade2 (cascade2_port, pros::E_MOTOR_GEARSET_18, true);
 pros::Motor banshee (banshee_PORT, pros::E_MOTOR_GEARSET_06, true);
+pros::Motor RatcheetClaw (RatcheetClaw_port, pros::E_MOTOR_GEARSET_18, true);
 
 pros::Imu imu(IMU_PORT);
 pros::Optical eyes(OPTICAL_PORT);

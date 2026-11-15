@@ -225,8 +225,8 @@ banshee.move(127);
 // //Claw.set_value(claw);
 // RatcheetClaw.move(claw ? -127 : 95);
 
-// if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_LEFT)){
-// driveTurn2(30);
+if(con.get_digital_new_press(E_CONTROLLER_DIGITAL_A)){
+goal_safe_side_red();
 
 }
 if (tankToggle){
